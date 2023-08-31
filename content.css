@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Segoe UI Variable Display";
+  src: url(../fonts/Segoe-UI-Variable-Static-Display.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Segoe UI Variable Display";
+  src: url(../fonts/Segoe-UI-Variable-Static-Display-Bold.ttf);
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI Variable Display";
+}
+
+html {
+  background-color: #f2f3f5;
+}
+
+body {
+  overflow: hidden;
+}
+
+#hotspot-print-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  padding-top: 2px;
+  margin: 0.2in;
+}
+
+.voucher {
+  outline: #bfbfbf solid 1px;
+  overflow: hidden;
+  height: 96px;
+  width: 154px;
+  page-break-inside: avoid;
+}
+
+#hotspot-print-grid.disabled {
+  display: none;
+}
+
+#extension-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  height: 5rem;
+  padding: 0 5%;
+}
+
+.btn-accent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background-color: #005fb8;
+  height: 2rem;
+  min-width: 7.5rem;
+  color: #ffffff;
+}
+
+.btn-accent:hover {
+  background-color: #0067c7;
+}
+
+.btn-accent:active {
+  opacity: 0.6;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  @top-center {
+    content: "";
+  }
+
+  @bottom-center {
+    content: "";
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+}
