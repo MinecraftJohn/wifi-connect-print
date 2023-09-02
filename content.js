@@ -36,6 +36,32 @@ const chevronDownIcon = `
   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z" fill="#242424"/>
   </svg>`;
+let vouchersData = [];
+let maxItem = 60;
+const renderVoucher = () => {
+  for (let i = 0; i < Math.ceil(vouchersData.length / maxItem); i++) {
+    document.querySelector("#papers-group").innerHTML += `<div class="page-layout"></div>`;
+  }
+  vouchersData.map((voucher, index) => {
+    document.querySelectorAll(".page-layout")[Math.ceil((index + 1) / maxItem - 1)].innerHTML += `
+    <div class="voucher">
+      <div class="logo"></div>
+      <p class="code">${voucher.code}</p>
+      <p class="type">${voucher.type}</p>
+      <span class="status">${voucher.status}</span>
+    </div>`;
+  });
+  // vouchers.map((code, index) => {
+  //   document.querySelectorAll(".page-layout")[Math.ceil((index + 1) / maxItem - 1)].innerHTML += `
+  //     <div class="relative voucher-container">
+  //       <div class="logo"></div>
+  //       <p class="relative">${code}</p>
+  //       <span class="absolute">${dataDurationTime.value} ${
+  //     Number(dataDurationTime.value) > 1 ? dataDurationType.value + "s" : dataDurationType.value
+  //   }</span>
+  //     </div>`;
+  // });
+};
 body.innerHTML += `
   <div id="extension-note">
     ${infoIcon}
@@ -44,53 +70,61 @@ body.innerHTML += `
 
 setTimeout(() => {
   document.querySelector("#extension-note").remove();
-  let vouchersData = [];
-  // let vouchersDataTest = [
-  //   { code: "123456", status: "27m", type: "Limited Usage Counts One" },
-  //   { code: "987654", status: "5h", type: "Limited Usage Counts One" },
-  //   { code: "369258", status: "5h 1m", type: "Limited Usage Counts One" },
-  // ];
   document.querySelectorAll(".voucher").forEach((voucher) => {
     let scrapedVoucher = {
       code: voucher.childNodes[0].innerText,
-      status: voucher.childNodes[1].innerText.slice(10).replace(/\s/g, ""),
+      status: voucher.childNodes[1].innerText.slice(10, -1),
       type: voucher.childNodes[2].innerText,
     };
     vouchersData.push(scrapedVoucher);
+    // let strng = "5h ";
+    // let result = strng.replace(/(\d+)h/g, function (match, p1) {
+    //   // p1 is the first capturing group, which is the number before h
+    //   if (p1 == "1") {
+    //     // if the number is 1, return " hr"
+    //     return p1 + " hr";
+    //   } else {
+    //     // otherwise, return " hrs"
+    //     return p1 + " hrs";
+    //   }
+    // });
+    // console.log(result); // 5 hrs
   });
   body.insertAdjacentHTML(
     "afterbegin",
-    `<header class="header">
+    `<header class="navigation">
         <a href="https://github.com/MinecraftJohn/wifi-connect" target="blank" title="Wi-Fi Connect" class="logo">${logo}</a>
-        <nav>
-          <ul>
-            <li>
-              <a href="https://github.com/MinecraftJohn/voucher-skin" target="blank">About</a>
-            </li>
-            <li>
-              <a href="https://github.com/MinecraftJohn/wifi-connect" target="blank">Custom Portal</a>
-            </li>
-            <li>
-              <a href="https://minecraftjohn.github.io/voucher-generator/" target="blank">Voucher Generator</a>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-accent">
-            ${printIcon}
-            Print vouchers
-          </button>
-        </nav>
+        <ul>
+          <li>
+            <a href="https://github.com/MinecraftJohn/voucher-skin" target="blank">About</a>
+          </li>
+          <li>
+            <a href="https://github.com/MinecraftJohn/wifi-connect" target="blank">Custom Portal</a>
+          </li>
+          <li>
+            <a href="https://minecraftjohn.github.io/voucher-generator/" target="blank">Voucher Generator</a>
+          </li>
+        </ul>
     </header>
     <main>
-      <div class="heading-container">
+      <header class="heading-container">
         <div>
           <h1>Print Preview</h1>
           <p class="text">1 pages on 8x11in. paper</p>
         </div>
-        <div class="btn dropdown">Edit layout${chevronDownIcon}</div>
-      </div>
+        <div class="heading-btns">
+          <button type="button" class="btn dropdown">Edit layout${chevronDownIcon}</button>
+          <button type="button" id="print-btn" class="btn btn-accent">
+            ${printIcon}
+            Print vouchers
+          </button>
+        </div>
+      </header>
+      <section id="papers-group" class="voucher-preview-container"></section>
     </main>
     `
   );
-  // console.log(vouchersDataTest.code);
-  // document.querySelector("#hotspot-print-grid").classList.remove("disabled");
-}, 600);
+  renderVoucher();
+  document.querySelector("#print-btn").onclick = () => window.print();
+  document.querySelector("#hotspot-print-grid").remove();
+}, 1000);

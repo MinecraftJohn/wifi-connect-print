@@ -18,5 +18,16 @@
       "css": ["content.css"],
       "js": ["content.js"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/svg/wifi-connect-logo-black.svg",
+        "assets/svg/wifi-connect-logo.svg",
+        "assets/fonts/Segoe-UI-Variable-Static-Display.ttf",
+        "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf"
+      ],
+      "matches": ["<all_urls>"]
+    }
   ]
 }

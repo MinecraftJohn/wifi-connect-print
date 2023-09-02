@@ -2,6 +2,14 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.9.2a
+> September 2, 2023
+- Modified navigation to nav tag and now stick to screen when scrolling.
+- Modified header tag to header tag and added transfered print button from nav to header section.
+- Added functionality to print button.
+- Added svg logo at assets folder.
+- Partially added a functionality to display vouchers per page.
+
 ### v23.9.1a
 > September 1, 2023
 - Improved accessibility. Convert px to rem.
