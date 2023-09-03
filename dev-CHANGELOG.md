@@ -2,6 +2,10 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.9.3a
+> September 3, 2023
+- Duration now dynamically change/pluralize.
+
 ### v23.9.2a
 > September 2, 2023
 - Modified navigation to nav tag and now stick to screen when scrolling.

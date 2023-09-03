@@ -55,8 +55,12 @@ html {
   filter: drop-shadow(0 0 0.0625rem rgb(0 0 0 / 5%)) drop-shadow(0 0.125rem 0.25rem rgb(0 0 0 / 9%));
 }
 
-.logo {
+.navigation .logo {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/svg/wifi-connect-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   height: 2rem;
+  width: 8.875rem;
 }
 
 .navigation ul {
