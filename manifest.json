@@ -25,7 +25,10 @@
         "assets/svg/wifi-connect-logo-black.svg",
         "assets/svg/wifi-connect-logo.svg",
         "assets/fonts/Segoe-UI-Variable-Static-Display.ttf",
-        "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf"
+        "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf",
+        "assets/svg/chevron-down-icon-12.svg",
+        "assets/svg/print-icon-20.svg",
+        "assets/svg/check-icon-16.svg"
       ],
       "matches": ["<all_urls>"]
     }

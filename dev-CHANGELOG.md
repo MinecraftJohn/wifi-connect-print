@@ -2,9 +2,15 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.9.4a
+> September 4, 2023
+- Transfer icons to link image on CSS.
+- Implemented the edit dropwdown with its functionality.
+- Implemented the functionality for color logo and show usage counts option on voucher.
+
 ### v23.9.3a
 > September 3, 2023
-- Duration now dynamically change/pluralize.
+- Duration now dynamically pluralize.
 
 ### v23.9.2a
 > September 2, 2023

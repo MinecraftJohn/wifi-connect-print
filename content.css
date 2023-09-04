@@ -16,7 +16,6 @@
   --page-layout: 13in;
   --duration-bg-color: #000000;
   --duration-text-color: #ffffff;
-  --voucher-logo: url("chrome-extension://__MSG_@@extension_id__/assets/svg/wifi-connect-logo-black.svg");
 }
 
 * {
@@ -28,6 +27,17 @@
 
 html {
   background-color: #f2f3f5;
+}
+
+.icon {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+ul {
+  list-style: none;
 }
 
 #hotspot-print-grid.disabled {
@@ -55,8 +65,15 @@ html {
   filter: drop-shadow(0 0 0.0625rem rgb(0 0 0 / 5%)) drop-shadow(0 0.125rem 0.25rem rgb(0 0 0 / 9%));
 }
 
-.navigation .logo {
+.logo {
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/svg/wifi-connect-logo.svg");
+}
+
+.logo.black {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/svg/wifi-connect-logo-black.svg");
+}
+
+.navigation .logo {
   background-size: contain;
   background-repeat: no-repeat;
   height: 2rem;
@@ -66,7 +83,6 @@ html {
 .navigation ul {
   display: flex;
   gap: 2rem;
-  list-style: none;
 }
 
 .navigation li a {
@@ -140,6 +156,99 @@ h1 {
   gap: 0.5rem;
 }
 
+.icon.chevron-down {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/svg/chevron-down-icon-12.svg");
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.icon.print {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/svg/print-icon-20.svg");
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon.check {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/svg/check-icon-16.svg");
+  width: 1rem;
+  height: 1rem;
+}
+
+#edit-btn {
+  display: none;
+}
+
+.edit-container {
+  position: relative;
+}
+
+.dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100dvh;
+  z-index: 8;
+}
+
+.edit-dialog {
+  all: unset;
+  z-index: 9;
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: #ffffff;
+  width: 16rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem #c6c6c6 solid;
+  filter: drop-shadow(0 0 0.0625rem rgb(0 0 0 / 5%)) drop-shadow(0 0.125rem 0.25rem rgb(0 0 0 / 9%));
+}
+
+#edit-btn:checked ~ .edit-dialog,
+#edit-btn:checked ~ .dialog-backdrop {
+  display: block !important;
+}
+
+.edit-dialog ul {
+  padding: 0.5rem;
+}
+
+.edit-dialog label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.edit-dialog label:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.edit-dialog label:active {
+  opacity: 0.6;
+}
+
+.edit-dialog input {
+  display: none;
+}
+
+.edit-dialog label .icon {
+  display: none;
+}
+
+.edit-dialog input:checked ~ label .icon {
+  display: block;
+}
+
+.edit-dialog p {
+  font-size: 0.875rem;
+  user-select: none;
+}
+
 .dropdown {
   justify-content: space-between;
   padding: 0 0.5rem 0 1rem;
@@ -177,7 +286,6 @@ h1 {
 }
 
 .voucher .logo {
-  background-image: var(--voucher-logo);
   background-size: contain;
   background-repeat: no-repeat;
   user-select: none;
