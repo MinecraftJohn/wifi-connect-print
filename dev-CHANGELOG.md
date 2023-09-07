@@ -2,6 +2,10 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.9.7a
+> September 7, 2023
+- Fully implemented the edit layout with localStorage.
+
 ### v23.9.4a
 > September 4, 2023
 - Transfer icons to link image on CSS.

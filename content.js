@@ -1,7 +1,7 @@
 if (localStorage.getItem("wifi-connect") == null) {
   localStorage.setItem(
     "wifi-connect",
-    JSON.stringify({ colorLogo: false, showUsageCounts: false, durationColor: "#000000", layoutSize: "legal" })
+    JSON.stringify({ colorLogo: false, showUsageCounts: false, durationColor: "#000000", layoutSize: "long" })
   );
 }
 
@@ -15,10 +15,17 @@ const infoIcon = `
   </svg>`;
 const clientData = JSON.parse(localStorage.getItem("wifi-connect"));
 let vouchersData = [];
-let maxItem = 60;
 
 const renderVoucher = () => {
   document.querySelector("#papers-group").innerHTML = "";
+  let maxItem;
+  if (clientData.layoutSize == "long") {
+    setHTMLRoot("--page-layout", "13in");
+    maxItem = 60;
+  } else {
+    setHTMLRoot("--page-layout", "11in");
+    maxItem = 50;
+  }
   for (let i = 0; i < Math.ceil(vouchersData.length / maxItem); i++) {
     document.querySelector("#papers-group").innerHTML += `<div class="page-layout"></div>`;
   }
@@ -31,6 +38,9 @@ const renderVoucher = () => {
       <span class="status">${voucher.status}</span>
     </div>`;
   });
+  document.querySelector("#print-paper-status").innerHTML = `${
+    document.querySelectorAll(".page-layout").length
+  } pages on ${clientData.layoutSize == "long" ? "8x13" : "8x11"}in. paper`;
 };
 const loadClientDataForEdit = () => {
   if (clientData.colorLogo === true) {
@@ -39,7 +49,21 @@ const loadClientDataForEdit = () => {
   if (clientData.showUsageCounts === true) {
     document.querySelector("#show-usage-counts").checked = true;
   }
+  document.querySelector("#duration-color").value = clientData.durationColor;
+  setHTMLRoot("--duration-bg-color", clientData.durationColor);
+  setDurationTextColor(clientData.durationColor);
 };
+const setHTMLRoot = (property, value) => document.querySelector(":root").style.setProperty(property, value);
+const setDurationTextColor = (hexColor) => {
+  const color = hexColor.replace("#", "");
+  const red = parseInt(color.substr(0, 2), 16);
+  const green = parseInt(color.substr(2, 2), 16);
+  const blue = parseInt(color.substr(4, 2), 16);
+  const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
+  const textColor = luminance > 0.5 ? "#000000" : "#ffffff";
+  setHTMLRoot("--duration-text-color", textColor);
+};
+
 body.innerHTML += `
   <div id="extension-note">
     ${infoIcon}
@@ -97,7 +121,7 @@ setTimeout(() => {
       <header class="heading-container">
         <div>
           <h1>Print Preview</h1>
-          <p class="text">1 pages on 8x11in. paper</p>
+          <p id="print-paper-status" class="text"></p>
         </div>
         <div class="heading-btns">
           <div class="edit-container">
@@ -110,18 +134,31 @@ setTimeout(() => {
               <ul>
                 <li>
                   <input type="checkbox" id="color-logo" />
-                  <label for="color-logo">
+                  <label for="color-logo" class="label">
                     <p>Colored Logo</p><i class="icon check"></i>
                   </label>
                 </li>
                 <li>
                   <input type="checkbox" id="show-usage-counts" />
-                  <label for="show-usage-counts">
+                  <label for="show-usage-counts" class="label">
                     <p>Show Usage Counts</p><i class="icon check"></i>
                   </label>
                 </li>
-                <li><p>Duration Color</p></li>
-                <li><p>Layout Size</p></li>
+                <li>
+                  <label for="duration-color" class="label">
+                    <p>Duration Color</p><input type="color" id="duration-color" />
+                  </label>
+                </li>
+                <li class="label">
+                  <p>Layout Size</p>
+                  <div class="select-container">
+                    <select id="layout-size">
+                      <option value="letter" ${clientData.layoutSize == "letter" && "selected"}>Letter 8.5x11in</option>
+                      <option value="long" ${clientData.layoutSize == "long" && "selected"}>Long 8.5x13in</option>
+                    </select>
+                    <i class="icon chevron-down"></i>
+                  </div>
+                </li>
               </ul>
             </dialog>
           </div>
@@ -161,6 +198,16 @@ setTimeout(() => {
       clientData.showUsageCounts = false;
       setData();
     }
+  };
+  document.querySelector("#duration-color").oninput = () => {
+    setHTMLRoot("--duration-bg-color", document.querySelector("#duration-color").value);
+    setDurationTextColor(document.querySelector("#duration-color").value);
+    clientData.durationColor = document.querySelector("#duration-color").value;
+    setData();
+  };
+  document.querySelector("#layout-size").onchange = () => {
+    clientData.layoutSize = document.querySelector("#layout-size").value;
+    setData();
   };
   renderVoucher();
   document.querySelector("#hotspot-print-grid").remove();
