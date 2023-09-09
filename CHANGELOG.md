@@ -3,5 +3,6 @@ All notable changes to this project will be documented in this file. Dates are d
 
 
 ### v1.0.0
-> Month 0, 2023
-- Text
+> September 9, 2023
+- Added style injector when trying to print voucher code on Omada Controller.
+- Added an edit button to customize the vouchers.

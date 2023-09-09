@@ -374,4 +374,16 @@ h1 {
   body {
     -webkit-print-color-adjust: exact;
   }
+
+  .navigation {
+    display: none;
+  }
+
+  .heading-container {
+    display: none;
+  }
+
+  .page-layout {
+    box-shadow: none;
+  }
 }

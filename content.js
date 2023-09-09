@@ -212,3 +212,8 @@ setTimeout(() => {
   renderVoucher();
   document.querySelector("#hotspot-print-grid").remove();
 }, 1000);
+
+document.querySelector("#title").innerText = "Print Voucher Code";
+document.querySelector("head").innerHTML += `<link rel="shortcut icon" href="${chrome.runtime.getURL(
+  "assets/img/favicon.png"
+)}" type="image/x-icon">`;

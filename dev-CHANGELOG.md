@@ -2,6 +2,11 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.9.9a
+> September 9, 2023
+- Fully implemented the print layout.
+- Added custom icon for the tab page.
+
 ### v23.9.7a
 > September 7, 2023
 - Fully implemented the edit layout with localStorage.

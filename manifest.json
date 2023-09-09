@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Wi-Fi Connect Voucher Skin",
   "version": "1.0.0",
-  "description": "Load a custom voucher design on Omada Controller for Wi-Fi Connect.",
+  "description": "Load a Wi-Fi Connect custom voucher style for Omada Controller.",
   "icons": {
     "16": "assets/img/favicon.png",
     "24": "assets/img/favicon.png",
@@ -28,7 +28,8 @@
         "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf",
         "assets/svg/chevron-down-icon-12.svg",
         "assets/svg/print-icon-20.svg",
-        "assets/svg/check-icon-16.svg"
+        "assets/svg/check-icon-16.svg",
+        "assets/img/favicon.png"
       ],
       "matches": ["<all_urls>"]
     }
