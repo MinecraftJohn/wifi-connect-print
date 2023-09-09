@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Wi-Fi Connect Voucher Skin",
+  "version": "1.0.0",
+  "description": "Load a Wi-Fi Connect custom voucher style for Omada Controller.",
+  "icons": {
+    "16": "assets/img/favicon.png",
+    "24": "assets/img/favicon.png",
+    "32": "assets/img/favicon.png",
+    "48": "assets/img/favicon.png",
+    "128": "assets/img/favicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://aps1-omada.tplinkcloud.com/omada/*/static/printVoucher.html?type=include&site=Default&token=*"
+      ],
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/svg/wifi-connect-logo-black.svg",
+        "assets/svg/wifi-connect-logo.svg",
+        "assets/fonts/Segoe-UI-Variable-Static-Display.ttf",
+        "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf",
+        "assets/svg/chevron-down-icon-12.svg",
+        "assets/svg/print-icon-20.svg",
+        "assets/svg/check-icon-16.svg",
+        "assets/img/favicon.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
