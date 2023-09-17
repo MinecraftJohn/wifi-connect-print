@@ -169,6 +169,10 @@ setTimeout(() => {
         </div>
       </header>
       <section id="papers-group" class="voucher-preview-container"></section>
+      <button class="btn scrollup">
+        Scroll to top
+        <i class="icon arrow-up"></i>
+      </button>
     </main>
     `
   );
@@ -211,9 +215,21 @@ setTimeout(() => {
   };
   renderVoucher();
   document.querySelector("#hotspot-print-grid").remove();
+
+  document.querySelector(".btn.scrollup").onclick = () => {
+    document.querySelector("html").scrollTop = 0;
+  };
 }, 1000);
 
 document.querySelector("#title").innerText = "Print Voucher Code";
 document.querySelector("head").innerHTML += `<link rel="shortcut icon" href="${chrome.runtime.getURL(
   "assets/img/favicon.png"
 )}" type="image/x-icon">`;
+
+window.onscroll = () => {
+  if (document.querySelector("html").scrollTop > 360) {
+    document.querySelector(".btn.scrollup").style.display = "flex";
+  } else {
+    document.querySelector(".btn.scrollup").style.display = "none";
+  }
+};

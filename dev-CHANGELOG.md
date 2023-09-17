@@ -2,6 +2,12 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.9.17a
+> September 17, 2023
+- Fixed visual bug on print mode.
+- Added button to scroll to top of the page when viewing preview.
+- Updated the file path for icons and logos
+
 ### v23.9.9a
 > September 9, 2023
 - Fully implemented the print layout.

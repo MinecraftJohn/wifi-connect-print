@@ -22,13 +22,14 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "assets/svg/wifi-connect-logo-black.svg",
-        "assets/svg/wifi-connect-logo.svg",
+        "assets/logo/wifi-connect-logo-black.svg",
+        "assets/logo/wifi-connect-logo.svg",
         "assets/fonts/Segoe-UI-Variable-Static-Display.ttf",
         "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf",
-        "assets/svg/chevron-down-icon-12.svg",
-        "assets/svg/print-icon-20.svg",
-        "assets/svg/check-icon-16.svg",
+        "assets/icons/chevron-down-icon-12.svg",
+        "assets/icons/print-icon-20.svg",
+        "assets/icons/check-icon-16.svg",
+        "assets/icons/arrow-up-icon-20.svg",
         "assets/img/favicon.png"
       ],
       "matches": ["<all_urls>"]
