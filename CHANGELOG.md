@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v1.0.1
+> October 4, 2023
+- Added button to scroll to top of the page when viewing preview.
+- Fixed visual bug on print mode.
+
 ### v1.0.0
 > September 9, 2023
 - Added style injector when trying to print voucher code on Omada Controller.
