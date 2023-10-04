@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Wi-Fi Connect Voucher Skin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Load a Wi-Fi Connect custom voucher style for Omada Controller.",
   "icons": {
     "16": "assets/img/favicon.png",
