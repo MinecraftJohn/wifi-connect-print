@@ -385,14 +385,9 @@ h1 {
     content: "";
   }
 
-  html {
-    background-color: red;
-  }
-
   body {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
-    background-color: red !important;
   }
 
   .navigation {
@@ -409,10 +404,10 @@ h1 {
 
   .voucher-preview-container {
     gap: 0;
-    margin-bottom: 0;
+    margin-bottom: 100px;
   }
 
   .btn.scrollup {
-    display: none;
+    display: none !important;
   }
 }
