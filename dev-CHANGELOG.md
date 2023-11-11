@@ -2,13 +2,18 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
-### v23.9.26a
-> September 26, 2023
+### v23.11.12a
+> November 12, 2023
+- Updated manifest description.
+- Updated README.md (now using svg for logo)
+
+### v23.10.26a
+> October 26, 2023
 - Reduced scale on hotspot checkboxes.
 - Fixed scroll to top button showing on print mode.
 
-### v23.9.22a
-> September 22, 2023
+### v23.10.22a
+> October 22, 2023
 - Changed project name from "voucher skin" to "wifi connect print".
 - Added support for firefox browser 🦊.
 - Separated CSS injection files.
