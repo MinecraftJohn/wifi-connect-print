@@ -2,6 +2,11 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.11.12b
+> November 12, 2023
+- Updated README.md
+- Updated CHANGELOG.md
+
 ### v23.11.12a
 > November 12, 2023
 - Updated manifest description.
@@ -15,7 +20,7 @@ All notable development changes to this project will be documented in this file.
 ### v23.10.22a
 > October 22, 2023
 - Changed project name from "voucher skin" to "wifi connect print".
-- Added support for firefox browser 🦊.
+- Added support for Firefox browser 🦊.
 - Separated CSS injection files.
 
 ### v23.9.17a
