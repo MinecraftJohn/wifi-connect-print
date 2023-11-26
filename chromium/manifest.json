@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "manifest_version": 3,
   "name": "Wi-Fi Connect Print",
   "description": "Load the Wi-Fi Connect custom voucher theme to your Omada Controller.",
@@ -27,6 +27,8 @@
       "resources": [
         "assets/logo/wifi-connect-logo-black.svg",
         "assets/logo/wifi-connect-logo.svg",
+        "assets/logo/wifi-connect-logo-1x1.svg",
+        "assets/logo/wifi-connect-logo-1x1-saturated.svg",
         "assets/fonts/Segoe-UI-Variable-Static-Display.ttf",
         "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf",
         "assets/icons/chevron-down-icon-12.svg",

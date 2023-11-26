@@ -1,3 +1,27 @@
-.grid-content-td-check-column[name="check-column"] label.checkbox-label {
-  transform: scale(2.8) translateX(0.375rem);
+[tbar-name="print"] .icon {
+  background-image: url("../assets/logo/wifi-connect-logo-1x1.svg") !important;
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+[tbar-name="print"].disabled .icon {
+  background-image: url("../assets/logo/wifi-connect-logo-1x1-saturated.svg") !important;
+}
+
+[tbar-name="del"] .icon {
+  background: url("https://aps1-omada.tplinkcloud.com/omada/*/hotspot/theme/img/svg/TableIconDelete.svg") no-repeat !important;
+}
+
+[tbar-name="del"].disabled .icon {
+  background: url("https://aps1-omada.tplinkcloud.com/omada/*/hotspot/theme/img/svg/TableIconDeleteThemeDisabled.svg")
+    no-repeat !important;
+}
+
+[tbar-name="del"] .text {
+  color: #ff0044;
+}
+
+[tbar-name="del"].disabled .text {
+  color: #a7a9ac;
 }

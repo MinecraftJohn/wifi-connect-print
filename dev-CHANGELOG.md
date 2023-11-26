@@ -2,6 +2,13 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v23.11.26a
+> November 26, 2023
+- Updated version from "1.1.0" to "1.1.1".
+- Removed scaled up checkbox input at hotspot page.
+- Replaced print selected voucher icon to wifi connect 1x1 logo at hotspot page.
+- Modified delete button at hotspot page.
+
 ### v23.11.12b
 > November 12, 2023
 - Updated README.md

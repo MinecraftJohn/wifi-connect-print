@@ -223,7 +223,7 @@ setTimeout(() => {
 
 document.querySelector("#title").innerText = "Print Voucher Code";
 document.querySelector("head").innerHTML += `<link rel="shortcut icon" href="${browser.runtime.getURL(
-  "assets/img/favicon.png"
+  "assets/logo/wifi-connect-logo-1x1.svg"
 )}" type="image/x-icon">`;
 
 window.onscroll = () => {
