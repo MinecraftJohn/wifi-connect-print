@@ -10,12 +10,11 @@
 }
 
 [tbar-name="del"] .icon {
-  background: url("https://aps1-omada.tplinkcloud.com/omada/*/hotspot/theme/img/svg/TableIconDelete.svg") no-repeat !important;
+  background: url("../assets/icons/delete-icon-24.svg") no-repeat !important;
 }
 
 [tbar-name="del"].disabled .icon {
-  background: url("https://aps1-omada.tplinkcloud.com/omada/*/hotspot/theme/img/svg/TableIconDeleteThemeDisabled.svg")
-    no-repeat !important;
+  background: url("../assets/icons/delete-icon-disabled-24.svg") no-repeat !important;
 }
 
 [tbar-name="del"] .text {
