@@ -2,6 +2,11 @@
 All notable development changes to this project will be documented in this file. Dates are displayed in UTC +8.
 
 
+### v24.1.21a
+> January 21, 2024
+- Removed hotspot page customization changes
+- Added support for firmware controller v5.12.9 and higher.
+
 ### v23.11.27a
 > November 27, 2023
 - Fixed delete button not working for firefox at hotspot page.

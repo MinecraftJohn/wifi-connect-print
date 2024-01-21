@@ -12,12 +12,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://aps1-omada.tplinkcloud.com/omada/*"],
-      "css": ["hotspot.css"],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": ["https://aps1-omada.tplinkcloud.com/omada/*/static/printVoucher.html?*"],
+      "matches": ["https://*.tplinkcloud.com/omada/*/static/printVoucher.html?*"],
       "css": ["print.css"],
       "js": ["print.js"]
     }
@@ -27,8 +22,6 @@
       "resources": [
         "assets/logo/wifi-connect-logo-black.svg",
         "assets/logo/wifi-connect-logo.svg",
-        "assets/logo/wifi-connect-logo-1x1.svg",
-        "assets/logo/wifi-connect-logo-1x1-saturated.svg",
         "assets/fonts/Segoe-UI-Variable-Static-Display.ttf",
         "assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf",
         "assets/icons/chevron-down-icon-12.svg",
