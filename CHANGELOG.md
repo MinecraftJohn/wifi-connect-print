@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 ### v1.1.2
 > January 21, 2024
-- Added support for firmware controller v5.12.9 and higher.
+- Added support for firmware controller v5 and higher.
 
 ### v1.1.1
 > November 27, 2023

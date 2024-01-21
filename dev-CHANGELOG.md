@@ -5,7 +5,7 @@ All notable development changes to this project will be documented in this file.
 ### v24.1.21a
 > January 21, 2024
 - Removed hotspot page customization changes
-- Added support for firmware controller v5.12.9 and higher.
+- Added support for firmware controller v5 and higher.
 
 ### v23.11.27a
 > November 27, 2023
