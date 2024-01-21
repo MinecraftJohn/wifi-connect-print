@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.2",
   "manifest_version": 3,
   "name": "Wi-Fi Connect Print",
   "description": "Load the Wi-Fi Connect custom voucher theme to your Omada Controller.",
@@ -12,12 +12,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://aps1-omada.tplinkcloud.com/omada/*"],
-      "css": ["hotspot.css"],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": ["https://aps1-omada.tplinkcloud.com/omada/*/static/printVoucher.html?*"],
+      "matches": ["https://*.tplinkcloud.com/omada/*/static/printVoucher.html?*"],
       "css": ["print.css"],
       "js": ["print.js"]
     }

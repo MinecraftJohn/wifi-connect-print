@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Segoe UI Variable Display";
-  src: url("moz-extension://__MSG_@@extension_id__/assets/fonts/Segoe-UI-Variable-Static-Display.ttf");
+  src: url("../assets/fonts/Segoe-UI-Variable-Static-Display.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Display";
-  src: url("moz-extension://__MSG_@@extension_id__/assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf");
+  src: url("../assets/fonts/Segoe-UI-Variable-Static-Display-Bold.ttf");
   font-weight: 700;
 }
 
@@ -67,11 +67,11 @@ ul {
 }
 
 .logo {
-  background-image: url("moz-extension://__MSG_@@extension_id__/assets/logo/wifi-connect-logo.svg");
+  background-image: url("../assets/logo/wifi-connect-logo.svg");
 }
 
 .logo.black {
-  background-image: url("moz-extension://__MSG_@@extension_id__/assets/logo/wifi-connect-logo-black.svg");
+  background-image: url("../assets/logo/wifi-connect-logo-black.svg");
 }
 
 .navigation .logo {
@@ -158,25 +158,25 @@ h1 {
 }
 
 .icon.chevron-down {
-  background-image: url("moz-extension://__MSG_@@extension_id__/assets/icons/chevron-down-icon-12.svg");
+  background-image: url("../assets/icons/chevron-down-icon-12.svg");
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .icon.arrow-up {
-  background-image: url("moz-extension://__MSG_@@extension_id__/assets/icons/arrow-up-icon-20.svg");
+  background-image: url("../assets/icons/arrow-up-icon-20.svg");
   width: 1rem;
   height: 1rem;
 }
 
 .icon.print {
-  background-image: url("moz-extension://__MSG_@@extension_id__/assets/icons/print-icon-20.svg");
+  background-image: url("../assets/icons/print-icon-20.svg");
   width: 1.25rem;
   height: 1.25rem;
 }
 
 .icon.check {
-  background-image: url("moz-extension://__MSG_@@extension_id__/assets/icons/check-icon-16.svg");
+  background-image: url("../assets/icons/check-icon-16.svg");
   width: 1rem;
   height: 1rem;
 }
