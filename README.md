@@ -7,9 +7,9 @@
 
 Wi-Fi Connect Print is the [Wi-Fi Connect](https://github.com/MinecraftJohn/wifi-connect) custom voucher on a browser extension for Omada Controller. This extension simply injects a CSS style when the page load. This is one of the best solution for me to easily print a customized vouchers in just a few click, compared to [Voucher Design Generator](https://github.com/MinecraftJohn/voucher-generator) that has a difficult steps just to generate fast.
 
-<!-- [![Get it on Edge](/github/svg/chrome-get-it-on.svg)]() -->
+[![Get it on Chrome](/github/svg/chrome-get-it-on.svg)](https://chromewebstore.google.com/detail/wi-fi-connect-print/nmgiiedjhjmpocbecgiejnhiedchpkpl)
 [![Get it on Edge](/github/svg/edge-get-it-on.svg)](https://microsoftedge.microsoft.com/addons/detail/jnnoepbnbceggomelmhelcnjdddbgecg)
-[![Get it on Edge](/github/svg/firefox-get-it-on.svg)]()
+<!-- [![Get it on Firefox](/github/svg/firefox-get-it-on.svg)]() -->
 
 <kbd><img src="https://raw.githubusercontent.com/MinecraftJohn/wifi-connect-print/main/github/img/wi-fi-connect-print-preview.png" alt="Wi-Fi Connect Print Preview"></kbd>
 
